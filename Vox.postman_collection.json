@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "2aaad5eb-0bd7-41fd-9077-5be625403297",
+		"name": "Vox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Avinash",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Rathod",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "er.avinashrathod+1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile_no",
+							"value": "9924283974",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "1997-06-03",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "IND",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3002/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "er.avinashrathod+1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3002/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IkF2aW5hc2giLCJsYXN0X25hbWUiOiJSYXRob2QiLCJlbWFpbCI6ImVyLmF2aW5hc2hyYXRob2QrMUBnbWFpbC5jb20iLCJyb2xlIjowLCJtb2JpbGVfbm8iOiI5OTI0MjgzOTc0IiwiZ2VuZGVyIjoiTWFsZSIsInN0YXR1cyI6MSwiY291bnRyeSI6IklORCIsImlhdCI6MTY1NTgzNDMzNCwiZXhwIjoxNjg3MzcwMzM0fQ.yLcoTzxbD9vDbJGVbBRuvuYQ9nS_EVsGOOaxw6qEC1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3002/api/user/view-profile/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"user",
+						"view-profile",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Block User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IkF2aW5hc2giLCJsYXN0X25hbWUiOiJSYXRob2QiLCJlbWFpbCI6ImVyLmF2aW5hc2hyYXRob2QrMUBnbWFpbC5jb20iLCJyb2xlIjowLCJtb2JpbGVfbm8iOiI5OTI0MjgzOTc0IiwiZ2VuZGVyIjoiTWFsZSIsInN0YXR1cyI6MSwiY291bnRyeSI6IklORCIsImlhdCI6MTY1NTgzNDMzNCwiZXhwIjoxNjg3MzcwMzM0fQ.yLcoTzxbD9vDbJGVbBRuvuYQ9nS_EVsGOOaxw6qEC1I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3002/api/user/block-user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"user",
+						"block-user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List blocked Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZmlyc3RfbmFtZSI6IkF2aW5hc2giLCJsYXN0X25hbWUiOiJSYXRob2QiLCJlbWFpbCI6ImVyLmF2aW5hc2hyYXRob2QrMUBnbWFpbC5jb20iLCJyb2xlIjowLCJtb2JpbGVfbm8iOiI5OTI0MjgzOTc0IiwiZ2VuZGVyIjoiTWFsZSIsInN0YXR1cyI6MSwiY291bnRyeSI6IklORCIsImlhdCI6MTY1NTgzNDMzNCwiZXhwIjoxNjg3MzcwMzM0fQ.yLcoTzxbD9vDbJGVbBRuvuYQ9nS_EVsGOOaxw6qEC1I",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/api/user/blocked-users",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"user",
+						"blocked-users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
